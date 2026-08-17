@@ -2,10 +2,10 @@ import { ArrowRight } from 'lucide-react'
 import Reveal from './Reveal'
 
 const SERVICES = [
-  { num: '01', title: 'Website design & development', desc: 'Responsive, fast, editorial-grade sites built to convert — not templated themes.' },
-  { num: '02', title: 'Custom web applications', desc: 'Dashboards, booking systems, internal tools — built on React/TypeScript, backed by real APIs.' },
-  { num: '03', title: 'Workflow automation (n8n)', desc: 'Connect the tools you already use — lead routing, notifications, follow-ups — on autopilot.' },
-  { num: '04', title: 'AI agents & chatbots (CrewAI)', desc: 'Multi-agent systems and site assistants that answer, qualify and escalate — safely.' },
+  { num: '01', title: 'Website design & development', desc: 'Responsive, fast, editorial-grade sites built to convert not templated themes.' },
+  { num: '02', title: 'Custom web applications', desc: 'Dashboards, booking systems, internal tools built on React/TypeScript, backed by real APIs.' },
+  { num: '03', title: 'Workflow automation (n8n)', desc: 'Connect the tools you already use lead routing, notifications, follow-ups on autopilot.' },
+  { num: '04', title: 'AI agents & chatbots (CrewAI)', desc: 'Multi-agent systems and site assistants that answer, qualify and escalate safely.' },
   { num: '05', title: 'SEO & performance', desc: 'Technical SEO, Core Web Vitals and structured content that a search engine can actually read.' },
 ]
 

@@ -29,7 +29,7 @@ export default function Contact() {
               Tell us what you're <em className="italic text-coral-deep font-normal">building.</em>
             </h1>
             <p className="mt-5 text-[16.5px] text-charcoal-soft leading-relaxed max-w-[56ch]">
-              A real person replies — no sales script. Prefer WhatsApp? It's below, alongside the form.
+              A real person replies, no sales script. Prefer WhatsApp? It's below, alongside the form.
             </p>
           </Reveal>
         </div>
@@ -77,7 +77,7 @@ export default function Contact() {
               first
             />
             <Channel icon={<Mail size={19} />} title="Email" sub="dammifabz@gmail.com" />
-            <Channel icon={<MapPin size={19} />} title="Studio location" sub="Badagry, Lagos, Nigeria — clients served globally" />
+            <Channel icon={<MapPin size={19} />} title="Studio location" sub="Badagry, Lagos, Nigeria clients served globally" />
 
             <div className="rounded-2xl overflow-hidden mt-6 mb-2 aspect-video shadow-soft">
               <img src={mapPin} alt="Studio location marker" className="w-full h-full object-cover" />

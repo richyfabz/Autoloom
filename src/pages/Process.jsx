@@ -6,11 +6,11 @@ import valueDial from '../assets/img/value-dial.jpg'
 import paperPlane from '../assets/img/paper-plane.jpg'
 
 const STEPS = [
-  { n: '01', title: 'Discover', text: "We talk through the goal, audience and what \"done\" looks like — including budget and timeline honestly." },
+  { n: '01', title: 'Discover', text: "We talk through the goal, audience and what \"done\" looks like including budget and timeline honestly." },
   { n: '02', title: 'Design', text: 'A design direction specific to your brand, reviewed before a single line of code is written.' },
   { n: '03', title: 'Build', text: 'Development in visible phases, with staging links you can check as the project progresses.' },
   { n: '04', title: 'Automate', text: 'Where relevant, we connect forms, CRMs and notifications so the site does work on its own.' },
-  { n: '05', title: 'Launch & grow', text: 'QA, deployment, and a plan for what improves next — not a project that goes cold at handover.' },
+  { n: '05', title: 'Launch & grow', text: 'QA, deployment, and a plan for what improves next not a project that goes cold at handover.' },
 ]
 
 export default function Process() {
@@ -21,7 +21,7 @@ export default function Process() {
           <Reveal>
             <span className="block text-xs tracking-[0.14em] uppercase font-semibold text-coral-deep mb-4">How a project runs</span>
             <h1 className="font-display font-normal text-[clamp(36px,5vw,60px)] leading-[1.08] max-w-[15ch]">
-              A short, structured process — <em className="italic text-coral-deep font-normal">no vague timelines.</em>
+              A short, structured process <em className="italic text-coral-deep font-normal">no vague timelines.</em>
             </h1>
             <p className="mt-5 text-[16.5px] text-charcoal-soft leading-relaxed max-w-[56ch]">
               Five phases, visible progress at every step, and a plan for what happens after launch.
@@ -57,7 +57,7 @@ export default function Process() {
               You always know <em className="italic text-coral-deep font-normal">where the project stands.</em>
             </h2>
             <p className="text-[16px] text-charcoal-soft leading-relaxed">
-              Regular check-ins fit your calendar, not ours. You'll get a staging link early, so feedback happens during the build — not as a surprise at the end.
+              Regular check-ins fit your calendar, not ours. You'll get a staging link early, so feedback happens during the build not as a surprise at the end.
             </p>
           </Reveal>
         </div>
@@ -74,7 +74,7 @@ export default function Process() {
               Most sites launch and go quiet. <em className="italic text-blush font-normal">Ours keep working.</em>
             </h2>
             <p className="text-[15.5px] text-ivory/65 leading-relaxed mb-7">
-              Because automation is part of the process, not an afterthought — the system you launch with is already set up to route leads and follow up, not just look good.
+              Because automation is part of the process, not an afterthought the system you launch with is already set up to route leads and follow up, not just look good.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold bg-ivory text-charcoal px-6 py-3 rounded-full hover:-translate-y-0.5 hover:shadow-soft transition-all group">
               Start a project <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />

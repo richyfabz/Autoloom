@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <Logo dark />
             <p className="text-[14.5px] text-ivory/55 my-4.5 max-w-[32ch] leading-relaxed">
-              Web design and workflow automation studio, based in Badagry, Lagos — serving clients globally.
+              Web design and workflow automation studio, based in Badagry, Lagos serving clients globally.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold border border-ivory/20 text-ivory px-5 py-2.5 rounded-full hover:bg-ivory/10 transition-all">
               Get in touch

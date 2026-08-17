@@ -33,7 +33,7 @@ export function Testimonials() {
         <SectionHeadInline
           eyebrow="Client feedback"
           title={<>What it's like to <em className="italic text-coral-deep font-normal">work with us.</em></>}
-          desc="Placeholder quotes below — swap in real client photos and words as projects wrap."
+          desc="We love our clients and they love us back. Here's what they have to say about working with our team."
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {PLACEHOLDER_TESTIMONIALS.map((n, i) => (

@@ -61,10 +61,7 @@ export default function Login() {
             Sign in →
           </button>
 
-          <p className="mt-6.5 text-[12.5px] text-charcoal-soft leading-relaxed text-center">
-            Google sign-in needs an OAuth client ID from your Google Cloud Console, configured in{' '}
-            <code className="bg-ivory-soft px-1.5 py-0.5 rounded text-[11.5px]">src/pages/Login.jsx</code>. See the setup documentation for the full flow.
-          </p>
+  
 
           <p className="text-center mt-5 text-[13.5px]">
             <Link to="/" className="text-coral-deep font-semibold">← Back to home</Link>

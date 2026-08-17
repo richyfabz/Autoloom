@@ -41,7 +41,7 @@ export default function About() {
               The first is presentation: does the site look and feel like the business behind it? The second is operations: what happens after someone fills out the form?
             </p>
             <p className="text-[16px] text-charcoal-soft leading-relaxed">
-              Most studios only solve the first. Autoloom solves both — pairing a custom design system with automation that actually routes leads, bookings and follow-ups.
+              Most studios only solve the first. Autoloom solves both pairing a custom design system with automation that actually routes leads, bookings and follow-ups.
             </p>
           </Reveal>
         </div>
@@ -77,10 +77,10 @@ export default function About() {
               <img src={growthIdea} alt="Idea leading to growth" className="w-full h-full object-cover" />
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <ValueCard title="No templated defaults" text="Every design decision is made for the brief in front of us — not pulled from a generic theme." />
+              <ValueCard title="No templated defaults" text="Every design decision is made for the brief in front of us not pulled from a generic theme." />
               <ValueCard title="Automation that's honest" text="We never imply a workflow does more than it does, or hide which costs are ours vs. a platform's." delay={0.1} />
               <ValueCard title="Real results only" text="We don't fabricate metrics or client quotes. What we show you is what actually shipped." delay={0.2} />
-              <ValueCard title="Two crafts, one team" text="Design and automation are handled by people who talk to each other daily — not separate vendors." delay={0.3} />
+              <ValueCard title="Two crafts, one team" text="Design and automation are handled by people who talk to each other daily not separate vendors." delay={0.3} />
             </div>
           </div>
         </div>

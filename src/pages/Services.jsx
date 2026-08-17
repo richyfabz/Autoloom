@@ -36,7 +36,7 @@ export default function Services() {
           <SectionHead
             dark
             eyebrow="How it fits together"
-            title={<>Design, code, automation and operations — <em className="italic text-coral-deep font-normal">woven, not stacked.</em></>}
+            title={<>Design, code, automation and operations <em className="italic text-coral-deep font-normal">woven, not stacked.</em></>}
             desc="Most agencies hand you a website and stop. Autoloom threads the site into the systems that run your business."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -50,7 +50,7 @@ export default function Services() {
             </Reveal>
             <Reveal delay={0.2} className="p-7 rounded-2xl border border-ivory/15 bg-ivory/5">
               <h4 className="font-display font-medium text-lg mb-2.5 text-ivory">Automate &amp; grow</h4>
-              <p className="text-ivory/60 text-[14.5px] leading-relaxed">n8n workflows and AI agents connect the site to how you actually work — then SEO and iteration keep it improving.</p>
+              <p className="text-ivory/60 text-[14.5px] leading-relaxed">n8n workflows and AI agents connect the site to how you actually work then SEO and iteration keep it improving.</p>
             </Reveal>
           </div>
         </div>
@@ -64,10 +64,10 @@ export default function Services() {
           <Reveal delay={0.1}>
             <span className="block text-xs tracking-[0.14em] uppercase font-semibold text-coral-deep mb-3.5">AI agents &amp; chatbots</span>
             <h2 className="font-display font-normal text-[clamp(26px,3vw,36px)] leading-[1.2] mb-4.5">
-              Assistants that answer, qualify and <em className="italic text-coral-deep font-normal">escalate — safely.</em>
+              Assistants that answer, qualify and <em className="italic text-coral-deep font-normal">escalate safely.</em>
             </h2>
             <p className="text-[15.5px] text-charcoal-soft leading-relaxed">
-              CrewAI-based multi-agent systems and site assistants trained on your business data, built with clear boundaries — they never invent a price, guarantee, or capability you haven't approved.
+              CrewAI-based multi-agent systems and site assistants trained on your business data, built with clear boundaries they never invent a price, guarantee, or capability you haven't approved.
             </p>
           </Reveal>
         </div>
@@ -81,7 +81,7 @@ export default function Services() {
               Real backends, <em className="italic text-coral-deep font-normal">not mockups.</em>
             </h2>
             <p className="text-[15.5px] text-charcoal-soft leading-relaxed">
-              Dashboards, booking systems, internal tools — built on React/TypeScript with production databases, authentication and payments where the project calls for them.
+              Dashboards, booking systems, internal tools built on React/TypeScript with production databases, authentication and payments where the project calls for them.
             </p>
           </Reveal>
           <Reveal className="rounded-[20px] shadow-soft overflow-hidden aspect-4/3 order-1 md:order-2">
@@ -94,7 +94,7 @@ export default function Services() {
         <div className="max-w-[1240px] mx-auto px-8">
           <SectionHead
             eyebrow="Investment"
-            title={<>Transparent starting ranges — <em className="italic text-coral-deep font-normal">not a fixed menu.</em></>}
+            title={<>Transparent starting ranges <em className="italic text-coral-deep font-normal">not a fixed menu.</em></>}
             desc="These are indicative ranges to help you scope a conversation, not a binding quote."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -110,7 +110,7 @@ export default function Services() {
 
       <CtaBand
         eyebrow="Not sure what you need?"
-        title={<>Talk it through — <em className="italic text-coral-deep font-normal">no obligation.</em></>}
+        title={<>Talk it through <em className="italic text-coral-deep font-normal">no obligation.</em></>}
         buttonLabel="Get an estimate"
       />
     </>

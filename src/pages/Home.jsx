@@ -41,7 +41,7 @@ function FixedHero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-display font-normal text-[clamp(38px,5.6vw,74px)] leading-[1.05] max-w-[13ch] text-ivory drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
           >
-            Two crafts, <em className="italic text-blush font-normal">one system</em> — design and automation, woven together.
+            Two crafts, <em className="italic text-blush font-normal">one system</em>  design and automation, woven together.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ function FixedHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-5.5 text-[17px] text-ivory/85 max-w-[48ch] leading-relaxed"
           >
-            Autoloom designs premium websites and connects them to the automation and AI systems that keep your business moving — without you chasing every lead by hand.
+            Autoloom designs premium websites and connects them to the automation and AI systems that keep your business moving without you chasing every lead by hand.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ function FixedResultsPanel() {
               A site that converts is good. A site connected to your operations <em className="italic text-blush font-normal">compounds.</em>
             </h2>
             <p className="mt-5 text-ivory/75 text-[15.5px] leading-relaxed max-w-[52ch]">
-              Every lead, booking and follow-up routed automatically means the value of your website keeps growing long after launch — instead of sitting still.
+              Every lead, booking and follow-up routed automatically means the value of your website keeps growing long after launch instead of sitting still.
             </p>
           </Reveal>
         </div>
@@ -110,7 +110,7 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto px-8">
           <SectionHead
             eyebrow="What we build"
-            title={<>A studio that designs, builds and <em className="italic text-coral-deep font-normal">automates</em> — not just a website team.</>}
+            title={<>A studio that designs, builds and <em className="italic text-coral-deep font-normal">automates</em> not just a website team.</>}
             desc="Every engagement sits on one of five capabilities. Most projects combine two or three of them."
           />
           <ServiceIndex />
@@ -125,7 +125,7 @@ export default function Home() {
             dark
             eyebrow="Track record"
             title={<>Built over <em className="italic text-coral-deep font-normal">100+ projects</em> across various niches.</>}
-            desc="From fitness memberships to fashion ecommerce, hospitality and nonprofits — one design system, applied to very different businesses."
+            desc="From fitness memberships to fashion ecommerce, hospitality and nonprofits one design system, applied to very different businesses."
           />
           <Reveal className="flex gap-11 flex-wrap mb-11">
             <Stat n="100+" label="projects shipped" />
@@ -155,7 +155,7 @@ export default function Home() {
 
       <CtaBand
         eyebrow="Ready when you are"
-        title={<>Tell us what you're building — <em className="italic text-coral-deep font-normal">we'll tell you how it fits together.</em></>}
+        title={<>Tell us what you're building, <em className="italic text-coral-deep font-normal">we'll tell you how it fits together.</em></>}
       />
     </>
   )

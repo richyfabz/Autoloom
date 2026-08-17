@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --color-ivory: #FBEEE4;
+  --color-ivory-soft: #F3E1D4;
+  --color-ivory-deep: #ECD5C4;
+  --color-charcoal: #2E2924;
+  --color-charcoal-soft: #6B5F56;
+  --color-coral: #C97A5D;
+  --color-coral-deep: #B4623F;
+  --color-blush: #E7B6A0;
+  --color-line: rgba(46,41,36,0.14);
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-ivory); color: var(--color-charcoal); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--color-coral); color: var(--color-ivory); }
+
+.font-display { font-family: var(--font-display); }
+
+.shadow-soft { box-shadow: 0 20px 50px -25px rgba(46,41,36,0.35); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 36s linear infinite; }
+.animate-marquee:hover, .group:hover .animate-marquee { animation-play-state: paused; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-ivory); }
+::-webkit-scrollbar-thumb { background: var(--color-blush); border-radius: 10px; }

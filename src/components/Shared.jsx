@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Star } from 'lucide-react'
 import Reveal from './Reveal'
 
 export function CtaBand({ eyebrow, title, buttonLabel = 'Start a project', to = '/contact' }) {
@@ -24,7 +24,29 @@ export function CtaBand({ eyebrow, title, buttonLabel = 'Start a project', to = 
   )
 }
 
-const PLACEHOLDER_TESTIMONIALS = [1, 2, 3]
+const TESTIMONIALS = [
+  {
+    name: 'Frank',
+    role: 'Director of Aueron AI',
+    quote:
+      'The delivery was crisp, thoughtful, and easy to trust. The site felt polished from the first review and the final result matched the vision perfectly.',
+    image: '/images/testimonials/kunle.jpg',
+  },
+  {
+    name: 'Becca',
+    role: 'Content Creator',
+    quote:
+      'Everything looked clean, modern, and intentional. The process stayed smooth from start to finish, and the finished website made my brand feel instantly stronger.',
+    image: '/images/testimonials/becca.jpg',
+  },
+  {
+    name: 'Kunle',
+    role: 'Civil Engineer',
+    quote:
+      'The structure, clarity, and attention to detail really stood out. It felt like working with a team that understood both design and execution.',
+    image: '/images/testimonials/frank.jpg',
+  },
+]
 
 export function Testimonials() {
   return (
@@ -36,19 +58,24 @@ export function Testimonials() {
           desc="We love our clients and they love us back. Here's what they have to say about working with our team."
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {PLACEHOLDER_TESTIMONIALS.map((n, i) => (
-            <Reveal key={n} delay={i * 0.1}>
+          {TESTIMONIALS.map((testimonial, i) => (
+            <Reveal key={testimonial.name} delay={i * 0.1}>
               <div className="bg-white border border-charcoal/15 rounded-[20px] p-7.5 flex flex-col gap-5 h-full">
-                <p className="font-display italic text-[17px] leading-relaxed text-charcoal">
-                  "[Client quote goes here — replace with real feedback once the project is live.]"
-                </p>
+                <div className="flex gap-1 text-[#C99A19]" aria-label="5 star rating">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} size={16} fill="currentColor" strokeWidth={0} />
+                  ))}
+                </div>
+                <p className="font-display italic text-[17px] leading-relaxed text-charcoal">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-11.5 h-11.5 rounded-full bg-gradient-to-br from-blush to-ivory-deep border-2 border-dashed border-charcoal/15 flex items-center justify-center text-[11px] font-display font-medium shrink-0">
-                    Photo
-                  </div>
+                  <img
+                    src={testimonial.image}
+                    alt={`${testimonial.name} portrait`}
+                    className="w-11.5 h-11.5 rounded-full object-cover border-2 border-charcoal/10 shrink-0"
+                  />
                   <div>
-                    <div className="font-semibold text-sm">Client name</div>
-                    <div className="text-[12.5px] text-charcoal-soft">Role, Company</div>
+                    <div className="font-semibold text-sm">{testimonial.name}</div>
+                    <div className="text-[12.5px] text-charcoal-soft">{testimonial.role}</div>
                   </div>
                 </div>
               </div>

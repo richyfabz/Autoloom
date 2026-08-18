@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import SectionHead from '../components/SectionHead'
 import ServiceMarquee from '../components/ServiceMarquee'
@@ -10,9 +10,24 @@ import autoloom3d from '../assets/img/autoloom-3d.jpg'
 import dashboardsBlue from '../assets/img/dashboards-blue.jpg'
 
 const WORK_SAMPLE = [
-  { name: 'Home of Fitness', desc: 'Membership platform for a fitness community.', from: 'from-blush', to: 'to-ivory-deep' },
-  { name: 'Realm of Fashion', desc: 'Production UK fashion storefront with Stripe checkout.', from: 'from-charcoal-soft', to: 'to-charcoal' },
-  { name: 'Elegance Restaurant', desc: 'Menu, story and booking for a Nigerian restaurant.', from: 'from-coral', to: 'to-blush' },
+  {
+    name: 'Home of Fitness',
+    desc: 'A dark, premium fitness storefront with product-led sections and a clear membership journey.',
+    image: '/images/projects/home-of-fitness.png',
+    href: 'https://home-of-fitness.vercel.app/',
+  },
+  {
+    name: 'Easy Breezy Flame',
+    desc: 'A calm spa and wellness experience built around soothing visuals, clear calls to action, and bookings.',
+    image: '/images/projects/easy-breezy.png',
+    href: 'https://easy-breezy-flame.vercel.app/',
+  },
+  {
+    name: 'Elegance Restaurant',
+    desc: 'A polished restaurant website showcasing signature dishes, table booking, and a refined dining brand.',
+    image: '/images/projects/elegance-restaurant.png',
+    href: 'https://elegance-restaurant.vercel.app/',
+  },
 ]
 
 /** Fixed-background section bounded to its own height, using
@@ -123,9 +138,9 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto px-8">
           <SectionHead
             dark
-            eyebrow="Track record"
-            title={<>Built over <em className="italic text-coral-deep font-normal">100+ projects</em> across various niches.</>}
-            desc="From fitness memberships to fashion ecommerce, hospitality and nonprofits one design system, applied to very different businesses."
+            eyebrow="Recent work"
+            title={<>Built across <em className="italic text-coral-deep font-normal">fitness, spa, and hospitality</em> brands.</>}
+            desc="Each project is tailored to the business, the audience, and the website's real goal, not just its visual style."
           />
           <Reveal className="flex gap-11 flex-wrap mb-11">
             <Stat n="100+" label="projects shipped" />
@@ -135,11 +150,23 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {WORK_SAMPLE.map((w, i) => (
               <Reveal key={w.name} delay={i * 0.1}>
-                <div className="rounded-2xl p-5.5 border border-ivory/15 bg-ivory/5 hover:-translate-y-1.5 hover:shadow-soft transition-all h-full">
-                  <div className={`w-full aspect-video rounded-xl mb-4 bg-gradient-to-br ${w.from} ${w.to}`} />
-                  <h4 className="font-display font-medium text-[17px] mb-1.5">{w.name}</h4>
+                <a
+                  href={w.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-2xl p-5.5 border border-ivory/15 bg-ivory/5 hover:-translate-y-1.5 hover:shadow-soft transition-all h-full group"
+                >
+                  <div className="relative w-full aspect-[4/3] rounded-xl mb-4 overflow-hidden bg-charcoal/20">
+                    <img src={w.image} alt={`${w.name} project preview`} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-charcoal/80 text-ivory text-[11px] px-3 py-1.5 backdrop-blur-sm">
+                      Visit site <ExternalLink size={13} />
+                    </div>
+                  </div>
+                  <h4 className="font-display font-medium text-[17px] mb-1.5 flex items-center gap-2">
+                    {w.name}
+                  </h4>
                   <p className="text-[13.5px] text-ivory/60">{w.desc}</p>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>

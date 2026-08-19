@@ -6,7 +6,7 @@ import SectionHead from '../components/SectionHead'
 import ServiceMarquee from '../components/ServiceMarquee'
 import ServiceIndex from '../components/ServiceIndex'
 import { CtaBand, Testimonials } from '../components/Shared'
-import autoloom3d from '../assets/img/autoloom-3d.jpg'
+import autoloom3d from '../assets/img/ChatGPT Image Aug 14, 2026, 01_35_50 AM.png'
 import dashboardsBlue from '../assets/img/dashboards-blue.jpg'
 
 const WORK_SAMPLE = [
@@ -36,17 +36,18 @@ const WORK_SAMPLE = [
 function FixedHero() {
   return (
     <section
-      className="relative min-h-[92vh] flex items-end bg-fixed bg-cover bg-[center_30%]"
+      className="relative min-h-[92vh] flex items-center justify-center bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${autoloom3d})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-charcoal/5 to-ivory" />
-      <div className="relative z-10 w-full pb-16 pt-32">
-        <div className="max-w-[1240px] mx-auto px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,238,228,0.22)_0%,rgba(251,238,228,0.42)_38%,rgba(46,41,36,0.18)_68%,rgba(46,41,36,0.3)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ivory/18 via-ivory/12 to-ivory/26" />
+      <div className="relative z-10 w-full px-8 py-20 md:py-24">
+        <div className="max-w-[920px] mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-2 bg-ivory/90 backdrop-blur-sm px-4 py-2 rounded-full text-[12.5px] font-semibold mb-5.5 shadow-soft"
+            className="inline-flex items-center gap-2 rounded-full border border-charcoal/10 bg-ivory/80 px-4.5 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-charcoal-soft backdrop-blur-md shadow-[0_10px_30px_-20px_rgba(46,41,36,0.35)]"
           >
             Web design &amp; automation studio
           </motion.span>
@@ -54,28 +55,35 @@ function FixedHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display font-normal text-[clamp(38px,5.6vw,74px)] leading-[1.05] max-w-[13ch] text-ivory drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
+            className="mt-6 font-display font-normal text-[clamp(42px,6vw,84px)] leading-[0.98] text-charcoal drop-shadow-[0_2px_14px_rgba(251,238,228,0.65)]"
           >
-            Two crafts, <em className="italic text-blush font-normal">one system</em>  design and automation, woven together.
+            Two crafts, <em className="italic text-coral-deep font-normal">one system</em>.
+            <span className="block mt-2">Design and automation, woven together.</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-5.5 text-[17px] text-ivory/85 max-w-[48ch] leading-relaxed"
+            className="mt-6 mx-auto max-w-[58ch] text-[17px] md:text-[18px] leading-relaxed text-charcoal/82"
           >
             Autoloom designs premium websites and connects them to the automation and AI systems that keep your business moving without you chasing every lead by hand.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex gap-3.5 flex-wrap mt-7.5"
+            className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5"
           >
-            <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold bg-ivory text-charcoal px-6 py-3 rounded-full hover:-translate-y-0.5 hover:shadow-soft transition-all group">
+            <Link
+              to="/services"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#3B332D] px-[26px] py-[14px] text-sm font-semibold text-ivory shadow-[0_16px_35px_-18px_rgba(59,51,45,0.75)] transition-all hover:-translate-y-0.5 hover:bg-[#2F2924]"
+            >
               See what we build <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold border border-ivory/40 text-ivory px-6 py-3 rounded-full hover:bg-ivory/10 hover:-translate-y-0.5 transition-all">
+            <Link
+              to="/contact"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-charcoal/18 bg-ivory/65 px-[26px] py-[14px] text-sm font-semibold text-charcoal transition-all hover:-translate-y-0.5 hover:bg-ivory/85"
+            >
               Start a project
             </Link>
           </motion.div>

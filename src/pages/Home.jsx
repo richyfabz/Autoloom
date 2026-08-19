@@ -1,18 +1,33 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import SectionHead from '../components/SectionHead'
 import ServiceMarquee from '../components/ServiceMarquee'
 import ServiceIndex from '../components/ServiceIndex'
 import { CtaBand, Testimonials } from '../components/Shared'
-import autoloom3d from '../assets/img/autoloom-3d.jpg'
+import autoloom3d from '../assets/img/ChatGPT Image Aug 14, 2026, 01_35_50 AM.png'
 import dashboardsBlue from '../assets/img/dashboards-blue.jpg'
 
 const WORK_SAMPLE = [
-  { name: 'Home of Fitness', desc: 'Membership platform for a fitness community.', from: 'from-blush', to: 'to-ivory-deep' },
-  { name: 'Realm of Fashion', desc: 'Production UK fashion storefront with Stripe checkout.', from: 'from-charcoal-soft', to: 'to-charcoal' },
-  { name: 'Elegance Restaurant', desc: 'Menu, story and booking for a Nigerian restaurant.', from: 'from-coral', to: 'to-blush' },
+  {
+    name: 'Home of Fitness',
+    desc: 'A dark, premium fitness storefront with product-led sections and a clear membership journey.',
+    image: '/images/projects/home-of-fitness.png',
+    href: 'https://home-of-fitness.vercel.app/',
+  },
+  {
+    name: 'Easy Breezy Flame',
+    desc: 'A calm spa and wellness experience built around soothing visuals, clear calls to action, and bookings.',
+    image: '/images/projects/easy-breezy.png',
+    href: 'https://easy-breezy-flame.vercel.app/',
+  },
+  {
+    name: 'Elegance Restaurant',
+    desc: 'A polished restaurant website showcasing signature dishes, table booking, and a refined dining brand.',
+    image: '/images/projects/elegance-restaurant.png',
+    href: 'https://elegance-restaurant.vercel.app/',
+  },
 ]
 
 /** Fixed-background section bounded to its own height, using
@@ -21,17 +36,18 @@ const WORK_SAMPLE = [
 function FixedHero() {
   return (
     <section
-      className="relative min-h-[92vh] flex items-end bg-fixed bg-cover bg-[center_30%]"
+      className="relative min-h-[92vh] flex items-center justify-center bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${autoloom3d})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-charcoal/5 to-ivory" />
-      <div className="relative z-10 w-full pb-16 pt-32">
-        <div className="max-w-[1240px] mx-auto px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,238,228,0.22)_0%,rgba(251,238,228,0.42)_38%,rgba(46,41,36,0.18)_68%,rgba(46,41,36,0.3)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ivory/18 via-ivory/12 to-ivory/26" />
+      <div className="relative z-10 w-full px-8 py-20 md:py-24">
+        <div className="max-w-[920px] mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-2 bg-ivory/90 backdrop-blur-sm px-4 py-2 rounded-full text-[12.5px] font-semibold mb-5.5 shadow-soft"
+            className="inline-flex items-center gap-2 rounded-full border border-charcoal/10 bg-ivory/80 px-4.5 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-charcoal-soft backdrop-blur-md shadow-[0_10px_30px_-20px_rgba(46,41,36,0.35)]"
           >
             Web design &amp; automation studio
           </motion.span>
@@ -39,28 +55,35 @@ function FixedHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display font-normal text-[clamp(38px,5.6vw,74px)] leading-[1.05] max-w-[13ch] text-ivory drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
+            className="mt-6 font-display font-normal text-[clamp(42px,6vw,84px)] leading-[0.98] text-charcoal drop-shadow-[0_2px_14px_rgba(251,238,228,0.65)]"
           >
-            Two crafts, <em className="italic text-blush font-normal">one system</em>  design and automation, woven together.
+            Two crafts, <em className="italic text-coral-deep font-normal">one system</em>.
+            <span className="block mt-2">Design and automation, woven together.</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-5.5 text-[17px] text-ivory/85 max-w-[48ch] leading-relaxed"
+            className="mt-6 mx-auto max-w-[58ch] text-[17px] md:text-[18px] leading-relaxed text-charcoal/82"
           >
             Autoloom designs premium websites and connects them to the automation and AI systems that keep your business moving without you chasing every lead by hand.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex gap-3.5 flex-wrap mt-7.5"
+            className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5"
           >
-            <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold bg-ivory text-charcoal px-6 py-3 rounded-full hover:-translate-y-0.5 hover:shadow-soft transition-all group">
+            <Link
+              to="/services"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#3B332D] px-[26px] py-[14px] text-sm font-semibold text-ivory shadow-[0_16px_35px_-18px_rgba(59,51,45,0.75)] transition-all hover:-translate-y-0.5 hover:bg-[#2F2924]"
+            >
               See what we build <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-semibold border border-ivory/40 text-ivory px-6 py-3 rounded-full hover:bg-ivory/10 hover:-translate-y-0.5 transition-all">
+            <Link
+              to="/contact"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-charcoal/18 bg-ivory/65 px-[26px] py-[14px] text-sm font-semibold text-charcoal transition-all hover:-translate-y-0.5 hover:bg-ivory/85"
+            >
               Start a project
             </Link>
           </motion.div>
@@ -123,9 +146,9 @@ export default function Home() {
         <div className="max-w-[1240px] mx-auto px-8">
           <SectionHead
             dark
-            eyebrow="Track record"
-            title={<>Built over <em className="italic text-coral-deep font-normal">100+ projects</em> across various niches.</>}
-            desc="From fitness memberships to fashion ecommerce, hospitality and nonprofits one design system, applied to very different businesses."
+            eyebrow="Recent work"
+            title={<>Built across <em className="italic text-coral-deep font-normal">fitness, spa, and hospitality</em> brands.</>}
+            desc="Each project is tailored to the business, the audience, and the website's real goal, not just its visual style."
           />
           <Reveal className="flex gap-11 flex-wrap mb-11">
             <Stat n="100+" label="projects shipped" />
@@ -135,11 +158,23 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {WORK_SAMPLE.map((w, i) => (
               <Reveal key={w.name} delay={i * 0.1}>
-                <div className="rounded-2xl p-5.5 border border-ivory/15 bg-ivory/5 hover:-translate-y-1.5 hover:shadow-soft transition-all h-full">
-                  <div className={`w-full aspect-video rounded-xl mb-4 bg-gradient-to-br ${w.from} ${w.to}`} />
-                  <h4 className="font-display font-medium text-[17px] mb-1.5">{w.name}</h4>
+                <a
+                  href={w.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-2xl p-5.5 border border-ivory/15 bg-ivory/5 hover:-translate-y-1.5 hover:shadow-soft transition-all h-full group"
+                >
+                  <div className="relative w-full aspect-[4/3] rounded-xl mb-4 overflow-hidden bg-charcoal/20">
+                    <img src={w.image} alt={`${w.name} project preview`} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                    <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-charcoal/80 text-ivory text-[11px] px-3 py-1.5 backdrop-blur-sm">
+                      Visit site <ExternalLink size={13} />
+                    </div>
+                  </div>
+                  <h4 className="font-display font-medium text-[17px] mb-1.5 flex items-center gap-2">
+                    {w.name}
+                  </h4>
                   <p className="text-[13.5px] text-ivory/60">{w.desc}</p>
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
